@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
     [Header("Declare")]
     public Rigidbody rb;
     public Transform player;
+    public Transform playerBody;
 
     [Header("Animations")]
     public Animator animator;
+    public bool Facing; // off for left
 
     [Header("Movement settings")]
     public float moveSpeed;
@@ -52,6 +54,12 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+        if(Input.GetKeyUp(KeyCode.Space) && IsJumping)
+        {
+            Vector3 yvel = rb.velocity;
+            yvel.y = 0;
+            rb.velocity = yvel;
+        }
 
         yvelo = rb.velocity.y;
         xvelo = rb.velocity.x;
@@ -70,6 +78,18 @@ public class PlayerController : MonoBehaviour
 
     private void handleAnims()
     {
+        // rotate
+        if (Input.GetKeyDown(KeyCode.D) && Facing == true)
+        {
+            playerBody.Rotate(new Vector3(0, 180, 0));
+            Facing = false;
+        }
+        if (Input.GetKeyDown(KeyCode.A) && Facing == false)
+        {
+            playerBody.Rotate(new Vector3(0, 180, 0));
+            Facing = true;
+        }
+
         if (xvelo > 0 || xvelo < 0)
         {
             animator.SetBool("Running", true);
@@ -120,9 +140,8 @@ public class PlayerController : MonoBehaviour
         if (IsFalling)
         {
             IsJumping = false;
-            Vector3 y = rb.velocity;
-            y.y = rb.velocity.y * fallMult;
-            rb.velocity = y;
+            rb.AddForce(Vector3.down * fallMult);
+
 
         }
        
