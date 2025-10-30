@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,18 +147,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_0'
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 112
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d00d59604885f642a18e03698017acd
+      internalID: -2054873655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_1'
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1
+        width: 112
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1f164714dec3f4989e806648de15a7
+      internalID: -1952121418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_2'
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1
+        width: 164
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0e234462c6ec44b996d3bf1cece715
+      internalID: -258472114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_3'
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1
+        width: 167
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5bfeae1d141af46b707c5fab9e623b
+      internalID: 365845706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_4'
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 12
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b441d804ce09444812f0681b4782cf
+      internalID: -1500200383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_5'
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1
+        width: 152
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef70c3001f02044789717b6a8b43a04
+      internalID: 317700033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_6'
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1
+        width: 112
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c13e738b7c28747a3dd76f40c8e4e5
+      internalID: -130398993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_7'
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1
+        width: 112
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa39e39d56b4ec648b5b06eb3239af15
+      internalID: -569078947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_8'
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 1
+        width: 112
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f23464059f348a449da8e387feecd7f
+      internalID: 1677014216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_9'
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 2
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73f7cb354f6c954c9997a35aa1ccfba
+      internalID: -1096708326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 18d35a434e6dbc4478ef7eed8488fc39
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_0': -2054873655
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_1': -1952121418
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_2': -258472114
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_3': 365845706
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_4': -1500200383
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_5': 317700033
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_6': -130398993
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_7': -569078947
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_8': 1677014216
+      '[SHOOT WITH MUZZLE FLASH] Bazooka - M20_9': -1096708326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
