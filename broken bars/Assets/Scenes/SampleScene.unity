@@ -772,7 +772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   player: {fileID: 2009661005}
+  playerBody: {fileID: 249158334}
   animator: {fileID: 1263828070}
+  Facing: 0
   moveSpeed: 15
   dist: 1.1
   mask:
@@ -782,7 +784,7 @@ MonoBehaviour:
   IsGrounded: 0
   IsJumping: 0
   IsFalling: 0
-  fallMult: 1.1
+  fallMult: 25
   yvelo: 0
   xvelo: 0
 --- !u!54 &2009661009
