@@ -30,6 +30,17 @@ public class PlayerController : MonoBehaviour
     public bool IsFalling;
     public float fallMult;
 
+    [Header("Jump Smoothing")]
+    public float fallSmoothingTime = 0.2f; // Duration of smoothing in seconds
+    private float fallSmoothingTimer = 0f;
+    private bool wasJumpingLastFrame = false;
+
+    [Header("Jump Timing")]
+    public float coyoteTime = 0.2f; // Time after leaving ground to allow jumping
+    public float jumpBufferTime = 0.2f; // Time to buffer jump input
+    private float coyoteTimer = 0f;
+    private float jumpBufferTimer = 0f;
+
     [Header("Debugging")]
     public float yvelo;
     public float xvelo;
@@ -46,15 +57,38 @@ public class PlayerController : MonoBehaviour
         handleAnims();
 
         IsGrounded = Physics.Raycast(player.position, Vector3.down, dist, mask);
-       
 
         HorizontalMove = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded)
+        // Update coyote timer
+        if (IsGrounded)
+        {
+            coyoteTimer = coyoteTime; // Reset coyote timer when grounded
+        }
+        else
+        {
+            IsFalling = true;
+            coyoteTimer -= Time.deltaTime; // Decrease timer when not grounded
+        }
+
+        // Update jump buffer timer
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpBufferTimer = jumpBufferTime; // Reset jump buffer timer when jump is pressed
+        }
+        else
+        {
+            jumpBufferTimer -= Time.deltaTime; // Decrease timer otherwise
+        }
+
+        // Handle jump logic with coyote time and jump buffering
+        if (jumpBufferTimer > 0 && coyoteTimer > 0)
         {
             Jump();
+            jumpBufferTimer = 0; // Consume the buffered jump
         }
-        if(Input.GetKeyUp(KeyCode.Space) && IsJumping)
+
+        if (Input.GetKeyUp(KeyCode.Space) && IsJumping)
         {
             Vector3 yvel = rb.velocity;
             yvel.y = 0;
@@ -64,7 +98,7 @@ public class PlayerController : MonoBehaviour
         yvelo = rb.velocity.y;
         xvelo = rb.velocity.x;
 
-        if(!IsGrounded && yvelo <= 0)
+        if (!IsGrounded && yvelo <= 0)
         {
             IsFalling = true;
         }
@@ -73,7 +107,12 @@ public class PlayerController : MonoBehaviour
             IsFalling = false;
         }
 
-        
+        // Start smoothing when transitioning from jumping to falling
+        if (IsFalling && wasJumpingLastFrame)
+        {
+            fallSmoothingTimer = fallSmoothingTime;
+        }
+        wasJumpingLastFrame = IsJumping;
     }
 
     private void handleAnims()
@@ -140,11 +179,15 @@ public class PlayerController : MonoBehaviour
         if (IsFalling)
         {
             IsJumping = false;
+
+            // Gradually increase the downward force for a smoother transition
             rb.AddForce(Vector3.down * fallMult);
-
-
         }
-       
+        else if (!IsGrounded && !Input.GetKey(KeyCode.Space) && rb.velocity.y > 0)
+        {
+            // Apply jump release smoothing when the jump button is released
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMult - 1) * Time.fixedDeltaTime;
+        }
     }
 
     public void Jump()
