@@ -31,13 +31,13 @@ public class PlayerController : MonoBehaviour
     public float fallMult;
 
     [Header("Jump Smoothing")]
-    public float fallSmoothingTime = 0.2f; // Duration of smoothing in seconds
+    public float fallSmoothingTime = 0.2f; 
     private float fallSmoothingTimer = 0f;
     private bool wasJumpingLastFrame = false;
 
     [Header("Jump Timing")]
     public float coyoteTime = 0.2f; 
-    public float jumpBufferTime = 0.2f; // Time to buffer jump input
+    public float jumpBufferTime = 0.2f; 
     private float coyoteTimer = 0f;
     private float jumpBufferTimer = 0f;
 
@@ -54,13 +54,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+
         handleAnims();
 
         IsGrounded = Physics.Raycast(player.position, Vector3.down, dist, mask);
 
         HorizontalMove = Input.GetAxis("Horizontal");
 
-        // Update coyote timer
+       
         if (IsGrounded)
         {
             coyoteTimer = coyoteTime; 
@@ -71,7 +74,7 @@ public class PlayerController : MonoBehaviour
             coyoteTimer -= Time.deltaTime; 
         }
 
-        // Update jump buffer timer
+       
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpBufferTimer = jumpBufferTime; 
