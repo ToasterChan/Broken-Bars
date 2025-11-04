@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public Transform player;
     public Transform playerBody;
 
+    [Header("Smoke Effects")]
+    public GameObject smokePref;
+    public Transform smokePoint;
+
     [Header("Animations")]
     public Animator animator;
     public bool Facing; // off for left
@@ -196,8 +200,13 @@ public class PlayerController : MonoBehaviour
     public void Jump()
     {
         rb.AddForce(Vector3.up * jumpheight * 100);
+        Instantiate(smokePref, smokePoint.position, smokePoint.rotation);
         IsJumping = true;
        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Instantiate(smokePref, smokePoint.position, smokePoint.rotation);
     }
 
     private void OnDrawGizmos()
