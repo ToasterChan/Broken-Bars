@@ -30,7 +30,7 @@ public class LookAtMouse : MonoBehaviour
         if (cam == null) return;
 
         Vector3 mouseScreen = Input.mousePosition;
-        float cameraToPlane = -cam.transform.position.z; // works when scene is on z=0 and camera at negative z
+        float cameraToPlane = -cam.transform.position.z; // works when scene is on z=0 and camera asat negative z
         Vector3 mouseWorld = cam.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, cameraToPlane));
         mouseWorld.z = gunHolder.position.z; // keep same Z
 
