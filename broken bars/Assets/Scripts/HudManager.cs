@@ -11,7 +11,8 @@ public class HudManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Maintext.text = "welcome o my game";
+        Maintext.text = "NOt me";
+        Option1.GetComponentInChildren<Text>().text = "hello";
     }
 
     // Update is called once per frame
