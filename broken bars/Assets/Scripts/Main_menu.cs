@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HudManager : MonoBehaviour
-{
+{ public void GoToScene(string sceneName)
+        { SceneManager.LoadScene(sceneName); }
+ public void quitApp()
+    {Application.Quit();
+      Debug.Log("application has quit");
+    }
 
-    public Text Maintext;
-    public Button Option1;
+    
     // Start is called before the first frame update
     void Start()
     {
-        Maintext.text = "NOt me";
-        Option1.GetComponentInChildren<Text>().text = "hello";
+        
     }
 
     // Update is called once per frame
