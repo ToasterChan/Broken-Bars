@@ -4342,9 +4342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ffa9e2c5a5b8d428851ebf9ec8eb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 150
+  dashSpeed: 100
   dashDuration: 0.1
   dashCooldown: 1
+  dashKey: 113
 --- !u!212 &3995205240034572548
 SpriteRenderer:
   m_ObjectHideFlags: 0
