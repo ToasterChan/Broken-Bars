@@ -200,6 +200,7 @@ public class PlayerController : MonoBehaviour
     public void Jump()
     {
         rb.AddForce(Vector3.up * jumpheight * 100);
+        
         Instantiate(smokePref, smokePoint.position, smokePoint.rotation);
         IsJumping = true;
        
@@ -207,6 +208,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(smokePref, smokePoint.position, smokePoint.rotation);
+        
     }
 
     private void OnDrawGizmos()

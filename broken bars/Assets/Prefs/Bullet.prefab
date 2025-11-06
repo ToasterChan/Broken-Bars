@@ -146,4 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd1670fe385e4845be7392b1e69eb72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 39.7
+  speed: 60
+  Effect: {fileID: 2464183671041774080, guid: 76b4a1682c9a1f44ab6a4d5a349dd4b9, type: 3}
+  shakeMagnitude: 1.5
+  shakeTime: 0.2
