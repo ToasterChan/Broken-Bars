@@ -23,7 +23,7 @@ public class Dash : MonoBehaviour
     void Update()
     {
         // Check for dash input and cooldown
-        if (Input.GetKeyDown(KeyCode.Q) && Time.time >= lastDashTime + dashCooldown)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= lastDashTime + dashCooldown)
         {
             StartDash();
         }
