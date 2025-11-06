@@ -8,7 +8,7 @@ public class Dash : MonoBehaviour
     public float dashDuration = 0.2f;  // How long the dash lasts
     public float dashCooldown = 1f; //Time befrore the player can dash again
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private bool isDashing = false;
     private float dashTime;
     private float lastDashTime;
@@ -16,14 +16,14 @@ public class Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Check for dash input and cooldown
-        if (Input .GetKeyDown(KeyCode.Q) && Time.time >= lastDashTime + dashCooldown)
+        if (Input.GetKeyDown(KeyCode.Q) && Time.time >= lastDashTime + dashCooldown)
         {
             StartDash();
         }
@@ -33,7 +33,7 @@ public class Dash : MonoBehaviour
     {
         if (isDashing)
         {
-          Dash();
+            PDash();
 
         }
     }
@@ -45,7 +45,7 @@ public class Dash : MonoBehaviour
         lastDashTime = Time.time;
     }
 
-    void Dash()
+    void PDash()
     {
         // Apply dash movement in the direction of input
         if (Time.time < dashTime)
@@ -59,7 +59,10 @@ public class Dash : MonoBehaviour
                 isDashing = false;
                 rb.velocity = Vector2.zero; // Stop movement after dash
 
-
+            }
+        }
+    }
+}
 
 
     
