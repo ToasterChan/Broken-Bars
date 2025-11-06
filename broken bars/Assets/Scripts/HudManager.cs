@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class HudManager : MonoBehaviour
 {
     public void GoToScene(string sceneName)
-    { SceneManager.LoadScene(sceneName); }
+    { 
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void quitApp()
     {
         Application.Quit();

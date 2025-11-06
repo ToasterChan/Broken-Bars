@@ -8,10 +8,10 @@ public class Dash : MonoBehaviour
     public float dashDuration = 0.2f;  // How long the dash lasts
     public float dashCooldown = 1f; //Time befrore the player can dash again
 
-    private Rigidbody rb;
-    private bool isDashing = false;
+    public Rigidbody rb;
+    public bool isDashing = false;
     private float dashTime;
-    private float lastDashTime;
+    public float lastDashTime;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,7 @@ public class Dash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= lastDashTime + dashCooldown)
         {
             StartDash();
+            Debug.Log("input oressed");
         }
     }
 
@@ -40,6 +41,7 @@ public class Dash : MonoBehaviour
 
     void StartDash()
     {
+        Debug.Log("Dash started");
         isDashing = true;
         dashTime = Time.time + dashDuration;
         lastDashTime = Time.time;
@@ -47,6 +49,7 @@ public class Dash : MonoBehaviour
 
     void PDash()
     {
+        
         // Apply dash movement in the direction of input
         if (Time.time < dashTime)
         {
