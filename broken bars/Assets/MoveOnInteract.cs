@@ -27,26 +27,24 @@ public class MoveOnInteract : MonoBehaviour
         }
     }
 
-   
+
     public void StartMoving()
     {
-      
         if (!isMoving)
         {
             isMoving = true;
-            movingToTarget = !movingToTarget; 
+           
         }
     }
 
     private void MoveToPosition(Vector3 destination)
     {
-       
         transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
 
-      
         if (Vector3.Distance(transform.position, destination) <= 0.01f)
         {
             isMoving = false;
+            movingToTarget = !movingToTarget; 
         }
     }
 }

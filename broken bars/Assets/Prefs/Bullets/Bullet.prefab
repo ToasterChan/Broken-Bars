@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6668253709889164552}
   - component: {fileID: 9171771939643406023}
   - component: {fileID: 2916554077076888041}
+  - component: {fileID: -343296757227497950}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -150,3 +151,16 @@ MonoBehaviour:
   Effect: {fileID: 2464183671041774080, guid: 76b4a1682c9a1f44ab6a4d5a349dd4b9, type: 3}
   shakeMagnitude: 1.5
   shakeTime: 0.2
+--- !u!114 &-343296757227497950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201869059958317981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110a102b933ddb04c9a9b7a8b2506ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
