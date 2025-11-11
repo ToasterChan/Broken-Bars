@@ -11,11 +11,13 @@ public class Health : MonoBehaviour
     private bool Candie = true;
     public BoxCollider boxCollider;
     public GameObject Impacteffect;
+    public EnemyScript Script;
     // Start is called before the first frame update
     void Start()
     {
         healthSlider.maxValue = health;
         healthSlider.value = health;
+        Script = GetComponent<EnemyScript>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,7 @@ public class Health : MonoBehaviour
 
     public void die()
     {
+        Script.canshoot = false;
         boxCollider.enabled = false;
         Candie = false;
         animator.SetTrigger("Die");
