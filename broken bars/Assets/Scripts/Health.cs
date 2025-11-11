@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public Slider healthSlider;
-    public int health = 100;
+    public float health = 100;
     public Animator animator;
     private bool Candie = true;
     public BoxCollider boxCollider;
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         healthSlider.value = health;
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(float damage)
     {
         health -= damage;
         
