@@ -17,6 +17,11 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         image.fillAmount = health / 10;
+
+        if(health > maxhealth)
+        {
+            health = maxhealth;
+        }
     }
 
     public void OnCollisionEnter(Collision collision)
