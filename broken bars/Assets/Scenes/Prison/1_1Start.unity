@@ -54939,7 +54939,7 @@ PrefabInstance:
     - target: {fileID: 1994182914161149617, guid: 1d266e5c1c8414549a35d20c8ac4884b,
         type: 3}
       propertyPath: levelname
-      value: 1_boss
+      value: 1_2 level
       objectReference: {fileID: 0}
     - target: {fileID: 2022797272518208818, guid: 1d266e5c1c8414549a35d20c8ac4884b,
         type: 3}

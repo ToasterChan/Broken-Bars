@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prison/1_3boss.unity
     guid: 23e0e1b1afa5e6344a33f817e0698977
+  - enabled: 1
+    path: Assets/Scenes/Prison/1_2 level.unity
+    guid: e7c2bfdfdd758ed4a9a356e01d739726
   m_configObjects: {}
